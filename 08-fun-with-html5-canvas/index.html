@@ -7,7 +7,7 @@
 <body>
 <canvas id="draw" width="800" height="800"></canvas>
 <script>
-  const effects = ['lighten', 'darken', 'multiply', 'subtract', 'add', 'normal']
+  const effects = ['lighten', 'darken', 'multiply', 'subtract','source-over', 'lighter', 'screen', 'overlay','color-dodge', 'color-burn', 'hard-light', 'soft-light', 'difference', 'exclusion', 'hue', 'saturation', 'color', 'luminosity']
   const canvas = document.querySelector('#draw');
   const ctx = canvas.getContext('2d');
   canvas.height = window.innerHeight;
@@ -39,6 +39,7 @@ function draw(e){
   } else {
     size--;
   };
+  console.log(ctx.globalCompositeOperation)
 }
 
 canvas.addEventListener('mousemove', draw);
